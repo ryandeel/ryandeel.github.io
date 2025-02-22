@@ -21,7 +21,7 @@
     <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <!-- div for our location -->
         <div class="card col-12 col-md-6 col-lg-4">
-            <div class="card-body">
+            <div class="card-body" id="divLocation">
                 <img src="https://www.iconpacks.net/icons/2/free-location-icon-2955-thumb.png" class="mx-auto d-block" alt="location pin" style="max-width: 20%;">
             </div>
         </div>
@@ -79,6 +79,7 @@
                 }
                 const objData = await objResponse.json()
                 console.log(objData)
+                // display weather on app
                 displayWeather(objData)
 
             } catch(objError){
@@ -90,13 +91,15 @@
             try {
                 const strLatitude = position.coords.latitude
                 const strLongitude = position.coords.longitude
-                const objResponse = await fetch("http://api.geonames.org/findNearbyPlaceNameJSON" + `?lat=${strLatitude}&lng=${strLongitude}&username=flamingit`)
+                const objResponse = await fetch("https://api.geoapify.com/v1/geocode/reverse" + `?lat=${strLatitude}&lon=${strLongitude}&format=json&apiKey=359607817a5e467682a93f988e884353`)
 
                 if(!objResponse.ok){
                     throw new Error(`HTTP Error Status:${objResponse.status}`)
                 }
                 const objData = await objResponse.json()
                 console.log(objData)
+                //display users location
+                document.querySelector("#divLocation").innerHTML += `<h4 class='text-center mt-2'>${objData.results[0].city}</h4>`
             } catch(objError){
                 console.log('Error fetching objData', objError)
             }
@@ -117,7 +120,7 @@
                 document.querySelector("#imgWeather").alt ="Picture of a shining sun."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Clear Sky</h4>`
             }
-            
+
 
             document.querySelector("#divWeather").innerHTML += strWeatherHTML
         }
