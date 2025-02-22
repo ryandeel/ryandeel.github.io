@@ -120,7 +120,46 @@
                 document.querySelector("#imgWeather").alt ="Picture of a shining sun."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Clear Sky</h4>`
             }
-
+            if(weatherCode==1 || weatherCode==2 || weatherCode==3){
+                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").alt ="Picture of clouds."
+                strWeatherHTML = `<h4 class='mt-2 text-center'>Cloudy</h4>`
+            }
+            if(weatherCode==45 || weatherCode==48){
+                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").alt ="Picture of fog."
+                strWeatherHTML = `<h4 class='mt-2 text-center'>Foggy</h4>`
+            }
+            if(weatherCode==51 || weatherCode==53 || weatherCode==55){
+                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").alt ="Picture of rainy clouds."
+                strWeatherHTML = `<h4 class='mt-2 text-center'>Drizzling Rain</h4>`
+            }
+            if(weatherCode==56 || weatherCode==57){
+                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").alt ="Picture of icy rain."
+                strWeatherHTML = `<h4 class='mt-2 text-center'>Freezing Drizzle</h4>`
+            }
+            if(weatherCode==61 || weatherCode==63 || weatherCode==65 || weatherCode==80 || weatherCode==81 || weatherCode==82){
+                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").alt ="Picture of rainy clouds."
+                strWeatherHTML = `<h4 class='mt-2 text-center'>Rain Shower</h4>`
+            }
+            if(weatherCode==66 || weatherCode==67){
+                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").alt ="Picture of icy rain."
+                strWeatherHTML = `<h4 class='mt-2 text-center'>Freezing Rain</h4>`
+            }
+            if(weatherCode==71 || weatherCode==73 || weatherCode==75 || weatherCode==77 || weatherCode==85 || weatherCode==86){
+                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").alt ="Picture of snowy clouds."
+                strWeatherHTML = `<h4 class='mt-2 text-center'>Snow fall</h4>`
+            }
+            if(weatherCode==95){
+                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").alt ="Picture of a thunderstorm."
+                strWeatherHTML = `<h4 class='mt-2 text-center'>Thunderstorm</h4>`
+            }
 
             document.querySelector("#divWeather").innerHTML += strWeatherHTML
         }
