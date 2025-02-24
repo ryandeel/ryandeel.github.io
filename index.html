@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <title>Weather App</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1250299849966882847/1343390396541046864/icon.png?ex=67bd194d&is=67bbc7cd&hm=1a38967f7c3ecd90570cf5c896e2fa6458e98197758ef520183bf753b32aec25&">
     <link rel="apple-touch-icon" href="images/apple-touch-icon-iphone-60x60.png">
     <link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-ipad-76x76.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone-retina-120x120.png">
@@ -22,25 +22,25 @@
         <!-- div for our location -->
         <div class="card col-12 col-md-6 col-lg-4">
             <div class="card-body" id="divLocation">
-                <img src="https://www.iconpacks.net/icons/2/free-location-icon-2955-thumb.png" class="mx-auto d-block" alt="location pin" style="max-width: 20%;">
+                <img src="https://cdn.discordapp.com/attachments/1250299849966882847/1343394330857046067/locationpin.png?ex=67bd1cf7&is=67bbcb77&hm=893d74a57df200714475ee7fe7e56a0707bdf2734dabf44c3b086322c6db432e&" class="mx-auto d-block" alt="location pin" style="max-width: 20%;">
             </div>
         </div>
         <!-- div for our current conditions-->
         <div class="mt-2 card col-12 col-md-6 col-lg-4">
             <div class="card-body" id="divWeather">
-                <img src="empty" class="mx-auto d-block" id="imgWeather" alt="empty" style="max-width: 20%;">
+                <img src="https://cdn.discordapp.com/attachments/1250299849966882847/1343390396817997924/placeholder.png?ex=67bd194d&is=67bbc7cd&hm=75fb011e61844299fffe5dfe44ba8d7d5b555ff1b50be50f3f99dcc0687cda0a&" class="mx-auto d-block" id="imgWeather" alt="empty" style="max-width: 20%;">
             </div>
         </div>
         <!-- div for our temperature -->
         <div class="mt-2 card col-12 col-md-6 col-lg-4">
             <div class="card-body d-flex align-items-center" id="divTemperature">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Thermometer_icon.png" alt="thermometer" style="max-width: 20%;">
+                <img src="https://cdn.discordapp.com/attachments/1250299849966882847/1343394330555060224/thermometer.png?ex=67bd1cf7&is=67bbcb77&hm=e7133e8937657d479e20f53c33c398cd33782d43f995ea961ca3b56f68919c3b&" alt="thermometer" style="max-width: 20%;">
             </div>
         </div>
         <!-- div for our humidity -->
         <div class="mt-2 card col-12 col-md-6 col-lg-4">
             <div class="card-body d-flex align-items-center" id="divHumidity">
-                <img src="https://static.vecteezy.com/system/resources/previews/009/663/352/non_2x/water-drop-icon-transparent-free-png.png" alt="humidity" style="max-width: 20%;">
+                <img src="https://cdn.discordapp.com/attachments/1250299849966882847/1343394330160791582/humidity.png?ex=67bd1cf7&is=67bbcb77&hm=9d266eced3b07c6cbd49e87d05000963bf67e93c46456be3132176a0ae17872d&" alt="humidity" style="max-width: 20%;">
             </div>
         </div>
     </div>
@@ -116,47 +116,47 @@
             document.querySelector("#divHumidity").innerHTML += strHumidityHTML
 
             if(weatherCode==0){
-                document.querySelector("#imgWeather").src = "https://cdn-icons-png.flaticon.com/512/3222/3222691.png"
+                document.querySelector("#imgWeather").src = "https://cdn.discordapp.com/attachments/1250299849966882847/1343389430769123458/sunny.png?ex=67bd1867&is=67bbc6e7&hm=e35570b4e15896620799b76bf3bdefb2b7e467a291d3d020997d93af40463fa7&"
                 document.querySelector("#imgWeather").alt ="Picture of a shining sun."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Clear Sky</h4>`
             }
             if(weatherCode==1 || weatherCode==2 || weatherCode==3){
-                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").src = "https://cdn.discordapp.com/attachments/1250299849966882847/1343389432308568116/cloud.png?ex=67bd1867&is=67bbc6e7&hm=4cac0d835ba9ed9a14c74805748454d30af2a18ae342f95e31dd5e86d939f901&"
                 document.querySelector("#imgWeather").alt ="Picture of clouds."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Cloudy</h4>`
             }
             if(weatherCode==45 || weatherCode==48){
-                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").src = "https://cdn.discordapp.com/attachments/1250299849966882847/1343389430391771206/foggy.png?ex=67bd1867&is=67bbc6e7&hm=4a6cd647ff1361b93d0036950393b42192f1f6726ae5fe8776d46ca5c8d3ceae&"
                 document.querySelector("#imgWeather").alt ="Picture of fog."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Foggy</h4>`
             }
             if(weatherCode==51 || weatherCode==53 || weatherCode==55){
-                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").src = "https://cdn.discordapp.com/attachments/1250299849966882847/1343389432056643584/rain.png?ex=67bd1867&is=67bbc6e7&hm=d7e1d353666911995cf36201a800440cd0712cca0e8eb85fd5dac906bfbac59f&"
                 document.querySelector("#imgWeather").alt ="Picture of rainy clouds."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Drizzling Rain</h4>`
             }
             if(weatherCode==56 || weatherCode==57){
-                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").src = "https://cdn.discordapp.com/attachments/1250299849966882847/1343389431733948466/freezing_rain.png?ex=67bd1867&is=67bbc6e7&hm=3ba347323b506aad444ac5649edfd7ed52d68f7e9790841272bf16aa0aadcf3c&"
                 document.querySelector("#imgWeather").alt ="Picture of icy rain."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Freezing Drizzle</h4>`
             }
             if(weatherCode==61 || weatherCode==63 || weatherCode==65 || weatherCode==80 || weatherCode==81 || weatherCode==82){
-                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").src = "https://cdn.discordapp.com/attachments/1250299849966882847/1343389432056643584/rain.png?ex=67bd1867&is=67bbc6e7&hm=d7e1d353666911995cf36201a800440cd0712cca0e8eb85fd5dac906bfbac59f&"
                 document.querySelector("#imgWeather").alt ="Picture of rainy clouds."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Rain Shower</h4>`
             }
             if(weatherCode==66 || weatherCode==67){
-                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").src = "https://cdn.discordapp.com/attachments/1250299849966882847/1343389431733948466/freezing_rain.png?ex=67bd1867&is=67bbc6e7&hm=3ba347323b506aad444ac5649edfd7ed52d68f7e9790841272bf16aa0aadcf3c&"
                 document.querySelector("#imgWeather").alt ="Picture of icy rain."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Freezing Rain</h4>`
             }
             if(weatherCode==71 || weatherCode==73 || weatherCode==75 || weatherCode==77 || weatherCode==85 || weatherCode==86){
-                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").src = "https://cdn.discordapp.com/attachments/1250299849966882847/1343389431436017754/snow.png?ex=67bd1867&is=67bbc6e7&hm=c99a3e166b2c826d2785aae15634c8701e3f3009b4dc9463e317593a6b86b43e&"
                 document.querySelector("#imgWeather").alt ="Picture of snowy clouds."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Snow fall</h4>`
             }
             if(weatherCode==95){
-                document.querySelector("#imgWeather").src = "PLACEHOLDER!!!!"
+                document.querySelector("#imgWeather").src = "https://cdn.discordapp.com/attachments/1250299849966882847/1343389431159328788/thunderstorm.png?ex=67bd1867&is=67bbc6e7&hm=70be51a923eb9d50b8077620e9820c9100e8d68ed9631188a272351b618fe10d&"
                 document.querySelector("#imgWeather").alt ="Picture of a thunderstorm."
                 strWeatherHTML = `<h4 class='mt-2 text-center'>Thunderstorm</h4>`
             }
